@@ -20,6 +20,10 @@ namespace Pong
 
     void IntroState::Init( )
     {
+        float speed = BALL_SPEED;
+        float direction = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/10.0)); 
+        player1_points = 0; 
+        ai_points = 0;
 
         gameState = STATE_PLAYING;
         turn = PLAYER_PIECE;
@@ -49,11 +53,13 @@ namespace Pong
 		_ball.setPosition( (SCREEN_WIDTH/ 2) - (this->_ball.getGlobalBounds().width/2),(SCREEN_HEIGHT/ 2) -(this->_ball.getGlobalBounds().height/2));
         _player1.setPosition( (SCREEN_WIDTH/6)-(this->_player2.getGlobalBounds().width/1.1),(SCREEN_HEIGHT/2)-(this->_player2.getGlobalBounds().height/.8) );
         _player2.setPosition( (SCREEN_WIDTH) - (this->_player2.getGlobalBounds().width/1),(SCREEN_HEIGHT/2) -(this->_player2.getGlobalBounds().height/.8));
+
 	}
 
     void IntroState::HandleInput( )
     {
         sf::Event Event; 
+        this->MoveBallAround();
 
         while ( this-> _data->window.pollEvent( Event))
         {
@@ -70,15 +76,13 @@ namespace Pong
     }
 
     void IntroState::Update( float dt){
-        if (this->_clock.getElapsedTime().asSeconds() > INTRO_STATE_SHOW)
-        {
-            this->MoveBallAround();
-        }
+        if (STATE_LOSE == gameState || STATE_WON == gameState)
+            if (this->_clock.getElapsedTime().asSeconds() > END_STATE_SHOW)
+            {
+                this->_data->machine.AddState( StateRef ( new EndState(_data)));
+            }
     }
     void IntroState::MoveBallAround( ){
-
-        //turn = PLAYER_PIECE;
-
         if (gameState == STATE_PLAYING){
 
             _ball.move(speed, direction);
@@ -88,7 +92,7 @@ namespace Pong
             //right wall
             if (_ball.getPosition().x  > SCREEN_WIDTH - _ball.getGlobalBounds().width)
             {
-                _ball.setPosition((SCREEN_WIDTH/ 2)- _ball.getGlobalBounds().width ,SCREEN_HEIGHT - _ball.getGlobalBounds().width);
+                _ball.setPosition( (SCREEN_WIDTH/ 2) - (this->_ball.getGlobalBounds().width/2),(SCREEN_HEIGHT/ 2) -(this->_ball.getGlobalBounds().height/2));
                 direction = -direction;
                 turn = PLAYER_PIECE;
                 int pos = _ball.getPosition().x;
@@ -101,7 +105,7 @@ namespace Pong
             //left wall
             if (_ball.getPosition().x  < 0)
             {
-                _ball.setPosition((SCREEN_WIDTH/ 2)- _ball.getGlobalBounds().width ,SCREEN_HEIGHT - _ball.getGlobalBounds().width);
+                _ball.setPosition( (SCREEN_WIDTH/ 2) - (this->_ball.getGlobalBounds().width/2),(SCREEN_HEIGHT/ 2) -(this->_ball.getGlobalBounds().height/2));
                 turn = AI_PIECE;
                 int pos = _ball.getPosition().x;
                 int pos2 = _ball.getPosition().y;
@@ -210,9 +214,13 @@ namespace Pong
     void IntroState::CheckforPlayerWinner(int pp,  int ap)
     {
         if (pp == 11){
+            gameState = STATE_WON;
+            this->_clock.restart();
             this->_data->machine.AddState( StateRef (new EndState(_data)), true);
         }
         if (ap == 11){
+            gameState = STATE_LOSE;
+            this->_clock.restart();
             this->_data->machine.AddState( StateRef (new EndState(_data)), true);
         }
     }

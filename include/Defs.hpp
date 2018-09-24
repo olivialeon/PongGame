@@ -5,6 +5,7 @@
 #define SCREEN_HEIGHT 600
 
 #define INTRO_STATE_SHOW .5
+#define END_STATE_SHOW .5
 
 #define PLAYER_1_PADDLE "Resources/PongPaddle.png"
 #define AI_PADDLE  "Resources/PongPaddle.png"
