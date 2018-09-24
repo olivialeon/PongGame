@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pong_core.dir/src/AssetManager.cpp.o"
+  "CMakeFiles/pong_core.dir/src/EndState.cpp.o"
   "CMakeFiles/pong_core.dir/src/Game.cpp.o"
   "CMakeFiles/pong_core.dir/src/InputManager.cpp.o"
   "CMakeFiles/pong_core.dir/src/IntroState.cpp.o"

@@ -16,6 +16,14 @@ SFML/Graphics.hpp
 SFML/Graphics.hpp
 -
 
+../include/EndState.hpp
+SFML/Graphics.hpp
+-
+State.hpp
+../include/State.hpp
+Game.hpp
+../include/Game.hpp
+
 ../include/Game.hpp
 memory
 -
@@ -56,6 +64,18 @@ State.hpp
 AssetManager.hpp
 /Users/solivialeonvitervo/Documents/pong/src/AssetManager.hpp
 
+/Users/solivialeonvitervo/Documents/pong/src/EndState.cpp
+sstream
+-
+EndState.hpp
+/Users/solivialeonvitervo/Documents/pong/src/EndState.hpp
+IntroState.hpp
+/Users/solivialeonvitervo/Documents/pong/src/IntroState.hpp
+Game.hpp
+/Users/solivialeonvitervo/Documents/pong/src/Game.hpp
+Defs.hpp
+/Users/solivialeonvitervo/Documents/pong/src/Defs.hpp
+
 /Users/solivialeonvitervo/Documents/pong/src/Game.cpp
 Game.hpp
 /Users/solivialeonvitervo/Documents/pong/src/Game.hpp
@@ -73,6 +93,8 @@ IntroState.hpp
 /Users/solivialeonvitervo/Documents/pong/src/IntroState.hpp
 Defs.hpp
 /Users/solivialeonvitervo/Documents/pong/src/Defs.hpp
+EndState.hpp
+/Users/solivialeonvitervo/Documents/pong/src/EndState.hpp
 iostream
 -
 cmath

@@ -1,2 +1,2 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libpong_core.a  CMakeFiles/pong_core.dir/src/AssetManager.cpp.o CMakeFiles/pong_core.dir/src/Game.cpp.o CMakeFiles/pong_core.dir/src/InputManager.cpp.o CMakeFiles/pong_core.dir/src/IntroState.cpp.o CMakeFiles/pong_core.dir/src/StateMachine.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ar qc libpong_core.a  CMakeFiles/pong_core.dir/src/AssetManager.cpp.o CMakeFiles/pong_core.dir/src/EndState.cpp.o CMakeFiles/pong_core.dir/src/Game.cpp.o CMakeFiles/pong_core.dir/src/InputManager.cpp.o CMakeFiles/pong_core.dir/src/IntroState.cpp.o CMakeFiles/pong_core.dir/src/StateMachine.cpp.o
 /Library/Developer/CommandLineTools/usr/bin/ranlib libpong_core.a

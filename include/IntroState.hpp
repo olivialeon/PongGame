@@ -30,7 +30,7 @@ namespace Pong
             sf::Clock _clock; 
             sf::Font font;
             sf::Text player_point_text;
-             sf::Text ai_point_text;
+            sf::Text ai_point_text;
 
             sf::Sprite _playButton;
             sf::Sprite _title;

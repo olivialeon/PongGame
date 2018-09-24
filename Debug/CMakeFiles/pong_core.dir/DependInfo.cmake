@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/solivialeonvitervo/Documents/pong/src/AssetManager.cpp" "/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles/pong_core.dir/src/AssetManager.cpp.o"
+  "/Users/solivialeonvitervo/Documents/pong/src/EndState.cpp" "/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles/pong_core.dir/src/EndState.cpp.o"
   "/Users/solivialeonvitervo/Documents/pong/src/Game.cpp" "/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles/pong_core.dir/src/Game.cpp.o"
   "/Users/solivialeonvitervo/Documents/pong/src/InputManager.cpp" "/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles/pong_core.dir/src/InputManager.cpp.o"
   "/Users/solivialeonvitervo/Documents/pong/src/IntroState.cpp" "/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles/pong_core.dir/src/IntroState.cpp.o"

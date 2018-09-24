@@ -81,9 +81,33 @@ CMakeFiles/pong_core.dir/src/AssetManager.cpp.o.provides: CMakeFiles/pong_core.d
 CMakeFiles/pong_core.dir/src/AssetManager.cpp.o.provides.build: CMakeFiles/pong_core.dir/src/AssetManager.cpp.o
 
 
+CMakeFiles/pong_core.dir/src/EndState.cpp.o: CMakeFiles/pong_core.dir/flags.make
+CMakeFiles/pong_core.dir/src/EndState.cpp.o: ../src/EndState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pong_core.dir/src/EndState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pong_core.dir/src/EndState.cpp.o -c /Users/solivialeonvitervo/Documents/pong/src/EndState.cpp
+
+CMakeFiles/pong_core.dir/src/EndState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pong_core.dir/src/EndState.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/solivialeonvitervo/Documents/pong/src/EndState.cpp > CMakeFiles/pong_core.dir/src/EndState.cpp.i
+
+CMakeFiles/pong_core.dir/src/EndState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pong_core.dir/src/EndState.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/solivialeonvitervo/Documents/pong/src/EndState.cpp -o CMakeFiles/pong_core.dir/src/EndState.cpp.s
+
+CMakeFiles/pong_core.dir/src/EndState.cpp.o.requires:
+
+.PHONY : CMakeFiles/pong_core.dir/src/EndState.cpp.o.requires
+
+CMakeFiles/pong_core.dir/src/EndState.cpp.o.provides: CMakeFiles/pong_core.dir/src/EndState.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pong_core.dir/build.make CMakeFiles/pong_core.dir/src/EndState.cpp.o.provides.build
+.PHONY : CMakeFiles/pong_core.dir/src/EndState.cpp.o.provides
+
+CMakeFiles/pong_core.dir/src/EndState.cpp.o.provides.build: CMakeFiles/pong_core.dir/src/EndState.cpp.o
+
+
 CMakeFiles/pong_core.dir/src/Game.cpp.o: CMakeFiles/pong_core.dir/flags.make
 CMakeFiles/pong_core.dir/src/Game.cpp.o: ../src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pong_core.dir/src/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pong_core.dir/src/Game.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pong_core.dir/src/Game.cpp.o -c /Users/solivialeonvitervo/Documents/pong/src/Game.cpp
 
 CMakeFiles/pong_core.dir/src/Game.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/pong_core.dir/src/Game.cpp.o.provides.build: CMakeFiles/pong_core.dir
 
 CMakeFiles/pong_core.dir/src/InputManager.cpp.o: CMakeFiles/pong_core.dir/flags.make
 CMakeFiles/pong_core.dir/src/InputManager.cpp.o: ../src/InputManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pong_core.dir/src/InputManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pong_core.dir/src/InputManager.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pong_core.dir/src/InputManager.cpp.o -c /Users/solivialeonvitervo/Documents/pong/src/InputManager.cpp
 
 CMakeFiles/pong_core.dir/src/InputManager.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/pong_core.dir/src/InputManager.cpp.o.provides.build: CMakeFiles/pong_
 
 CMakeFiles/pong_core.dir/src/IntroState.cpp.o: CMakeFiles/pong_core.dir/flags.make
 CMakeFiles/pong_core.dir/src/IntroState.cpp.o: ../src/IntroState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pong_core.dir/src/IntroState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pong_core.dir/src/IntroState.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pong_core.dir/src/IntroState.cpp.o -c /Users/solivialeonvitervo/Documents/pong/src/IntroState.cpp
 
 CMakeFiles/pong_core.dir/src/IntroState.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/pong_core.dir/src/IntroState.cpp.o.provides.build: CMakeFiles/pong_co
 
 CMakeFiles/pong_core.dir/src/StateMachine.cpp.o: CMakeFiles/pong_core.dir/flags.make
 CMakeFiles/pong_core.dir/src/StateMachine.cpp.o: ../src/StateMachine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pong_core.dir/src/StateMachine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pong_core.dir/src/StateMachine.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pong_core.dir/src/StateMachine.cpp.o -c /Users/solivialeonvitervo/Documents/pong/src/StateMachine.cpp
 
 CMakeFiles/pong_core.dir/src/StateMachine.cpp.i: cmake_force
@@ -180,6 +204,7 @@ CMakeFiles/pong_core.dir/src/StateMachine.cpp.o.provides.build: CMakeFiles/pong_
 # Object files for target pong_core
 pong_core_OBJECTS = \
 "CMakeFiles/pong_core.dir/src/AssetManager.cpp.o" \
+"CMakeFiles/pong_core.dir/src/EndState.cpp.o" \
 "CMakeFiles/pong_core.dir/src/Game.cpp.o" \
 "CMakeFiles/pong_core.dir/src/InputManager.cpp.o" \
 "CMakeFiles/pong_core.dir/src/IntroState.cpp.o" \
@@ -189,13 +214,14 @@ pong_core_OBJECTS = \
 pong_core_EXTERNAL_OBJECTS =
 
 libpong_core.a: CMakeFiles/pong_core.dir/src/AssetManager.cpp.o
+libpong_core.a: CMakeFiles/pong_core.dir/src/EndState.cpp.o
 libpong_core.a: CMakeFiles/pong_core.dir/src/Game.cpp.o
 libpong_core.a: CMakeFiles/pong_core.dir/src/InputManager.cpp.o
 libpong_core.a: CMakeFiles/pong_core.dir/src/IntroState.cpp.o
 libpong_core.a: CMakeFiles/pong_core.dir/src/StateMachine.cpp.o
 libpong_core.a: CMakeFiles/pong_core.dir/build.make
 libpong_core.a: CMakeFiles/pong_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libpong_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/solivialeonvitervo/Documents/pong/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libpong_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/pong_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pong_core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -205,6 +231,7 @@ CMakeFiles/pong_core.dir/build: libpong_core.a
 .PHONY : CMakeFiles/pong_core.dir/build
 
 CMakeFiles/pong_core.dir/requires: CMakeFiles/pong_core.dir/src/AssetManager.cpp.o.requires
+CMakeFiles/pong_core.dir/requires: CMakeFiles/pong_core.dir/src/EndState.cpp.o.requires
 CMakeFiles/pong_core.dir/requires: CMakeFiles/pong_core.dir/src/Game.cpp.o.requires
 CMakeFiles/pong_core.dir/requires: CMakeFiles/pong_core.dir/src/InputManager.cpp.o.requires
 CMakeFiles/pong_core.dir/requires: CMakeFiles/pong_core.dir/src/IntroState.cpp.o.requires

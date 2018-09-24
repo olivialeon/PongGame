@@ -17,11 +17,7 @@
 #define AI_PIECE 2
 
 #define STATE_PLAYING 99
-#define STATE_PAUSED 98
 #define STATE_WON 97
 #define STATE_LOSE 96
-#define STATE_DRAW 95
-#define STATE_AI_PLAYING 94
-#define STATE_PLAYER_PLAYING 93
 
 #define BALL_SPEED 4.0;

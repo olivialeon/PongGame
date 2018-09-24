@@ -1,6 +1,7 @@
 #include <sstream>
 #include "IntroState.hpp"
 #include "Defs.hpp"
+#include "EndState.hpp"
 
 #include <iostream>
 #include <cmath>
@@ -10,6 +11,8 @@ namespace Pong
 {
     float speed = BALL_SPEED;
     float direction = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/10.0)); 
+    int player1_points = 0; 
+    int ai_points = 0;
 
     IntroState::IntroState( GameDataRef data) : _data( data)
     {
@@ -20,7 +23,6 @@ namespace Pong
 
         gameState = STATE_PLAYING;
         turn = PLAYER_PIECE;
-
 
         this->_data->assets.LoadFont("font", FONT_FILE);
 
@@ -75,24 +77,36 @@ namespace Pong
     }
     void IntroState::MoveBallAround( ){
 
-        turn = PLAYER_PIECE;
+        //turn = PLAYER_PIECE;
 
         if (gameState == STATE_PLAYING){
 
             _ball.move(speed, direction);
+            this->AIMovesPaddle();
+            this->CheckForCollision();
 
             //right wall
             if (_ball.getPosition().x  > SCREEN_WIDTH - _ball.getGlobalBounds().width)
             {
-                speed = -1 * speed;
+                _ball.setPosition((SCREEN_WIDTH/ 2)- _ball.getGlobalBounds().width ,SCREEN_HEIGHT - _ball.getGlobalBounds().width);
+                direction = -direction;
+                turn = PLAYER_PIECE;
+                int pos = _ball.getPosition().x;
+                int pos2 = _ball.getPosition().y;
+                std::cout << pos << std::endl;
+                std::cout << pos2 << std::endl;
                 this->GivePoints(turn);
             }
 
             //left wall
             if (_ball.getPosition().x  < 0)
             {
-                direction = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/10.0));
-                speed = -1 * speed;
+                _ball.setPosition((SCREEN_WIDTH/ 2)- _ball.getGlobalBounds().width ,SCREEN_HEIGHT - _ball.getGlobalBounds().width);
+                turn = AI_PIECE;
+                int pos = _ball.getPosition().x;
+                int pos2 = _ball.getPosition().y;
+                std::cout << pos << std::endl;
+                std::cout << pos2 << std::endl;
                 this->GivePoints(turn);
             }
             
@@ -107,7 +121,27 @@ namespace Pong
                 direction = -direction;
             }
 
-            this->CheckForCollision();
+        }
+    }
+
+    void IntroState::AIMovesPaddle()
+    {
+        //move down
+        if (_player1.getPosition().y  < SCREEN_HEIGHT - _player1.getGlobalBounds().height)
+        {
+            if (_ball.getPosition().y > _player2.getPosition().y + _player2.getGlobalBounds().height)
+            {
+                _player2.move(0.0f, 20.0f);
+            }
+        }
+
+        //move up 
+        if (_player2.getPosition().y > 0)
+        {
+            if ( _ball.getPosition().y < _player2.getPosition().y)
+            {
+                _player2.move(0.0f, -20.0f);
+            }   
         }
     }
 
@@ -130,7 +164,7 @@ namespace Pong
          }
     }
 
-    
+
     void IntroState::CheckForCollision()
     {
         //left paddle 
@@ -140,6 +174,7 @@ namespace Pong
         {
             std::cout <<"Collision"<< std::endl;
             speed = -speed;
+            turn = PLAYER_PIECE;
             direction = - static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/10.0));
         }
 
@@ -150,6 +185,7 @@ namespace Pong
         {
             std::cout <<"Collision"<< std::endl;
             speed = -speed;
+            turn = AI_PIECE;
             direction = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/10.0));
 
         }
@@ -157,8 +193,6 @@ namespace Pong
 
     void IntroState::GivePoints(int turn)
     {
-        int player1_points = 0; 
-        int ai_points = 0;
 
         if ( turn == PLAYER_PIECE){
             player1_points += 1;
@@ -176,10 +210,10 @@ namespace Pong
     void IntroState::CheckforPlayerWinner(int pp,  int ap)
     {
         if (pp == 11){
-            //end game and notify player1 won
+            this->_data->machine.AddState( StateRef (new EndState(_data)), true);
         }
         if (ap == 11){
-            //end game and notify ai won, and player loses 
+            this->_data->machine.AddState( StateRef (new EndState(_data)), true);
         }
     }
     void IntroState::Draw( float dt)

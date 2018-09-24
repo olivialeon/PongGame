@@ -190,6 +190,33 @@ src/AssetManager.cpp.s:
 	$(MAKE) -f CMakeFiles/pong_core.dir/build.make CMakeFiles/pong_core.dir/src/AssetManager.cpp.s
 .PHONY : src/AssetManager.cpp.s
 
+src/EndState.o: src/EndState.cpp.o
+
+.PHONY : src/EndState.o
+
+# target to build an object file
+src/EndState.cpp.o:
+	$(MAKE) -f CMakeFiles/pong_core.dir/build.make CMakeFiles/pong_core.dir/src/EndState.cpp.o
+.PHONY : src/EndState.cpp.o
+
+src/EndState.i: src/EndState.cpp.i
+
+.PHONY : src/EndState.i
+
+# target to preprocess a source file
+src/EndState.cpp.i:
+	$(MAKE) -f CMakeFiles/pong_core.dir/build.make CMakeFiles/pong_core.dir/src/EndState.cpp.i
+.PHONY : src/EndState.cpp.i
+
+src/EndState.s: src/EndState.cpp.s
+
+.PHONY : src/EndState.s
+
+# target to generate assembly for a file
+src/EndState.cpp.s:
+	$(MAKE) -f CMakeFiles/pong_core.dir/build.make CMakeFiles/pong_core.dir/src/EndState.cpp.s
+.PHONY : src/EndState.cpp.s
+
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -314,6 +341,9 @@ help:
 	@echo "... src/AssetManager.o"
 	@echo "... src/AssetManager.i"
 	@echo "... src/AssetManager.s"
+	@echo "... src/EndState.o"
+	@echo "... src/EndState.i"
+	@echo "... src/EndState.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
